@@ -23,6 +23,8 @@ This application was developed in **NodeJS**(using express frame work) having **
 4. Postgres
 5. MD5 Online (encryption)
 6. MongoDB
+7. Mail Trap
+8. Bee queue
 
 ## How to install it
 
