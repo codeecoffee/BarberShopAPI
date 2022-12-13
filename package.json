@@ -16,7 +16,7 @@
     "bee-queue": "^1.2.3",
     "beequeue": "^0.3.4",
     "date-fns": "^2.0.0-beta.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-handlebars": "^4.0.4",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.20",
