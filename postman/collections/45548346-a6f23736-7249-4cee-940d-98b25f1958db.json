@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "45548346-a6f23736-7249-4cee-940d-98b25f1958db",
+		"name": "BarberApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test Db Connection",
+			"id": "45548346-0801bded-00ef-41a6-858a-5f161d16d815",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/test/db-connection",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"test",
+						"db-connection"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
