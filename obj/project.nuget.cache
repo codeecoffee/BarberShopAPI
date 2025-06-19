@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "NHcfA5+JCZw=",
+  "success": true,
+  "projectFilePath": "A:\\Projects\\BarberApi\\BarberApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.6\\microsoft.aspnetcore.openapi.9.0.6.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
