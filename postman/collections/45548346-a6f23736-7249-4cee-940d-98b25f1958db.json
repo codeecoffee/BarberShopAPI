@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "45548346-a6f23736-7249-4cee-940d-98b25f1958db",
+		"name": "BarberApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test Db Connection",
+			"id": "45548346-0801bded-00ef-41a6-858a-5f161d16d815",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/test/db-connection",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"test",
+						"db-connection"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1aa2d1dd-b392-41ca-8634-30ba06491887",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"// Header for the request\r",
+					"console.log('\\n' + '═'.repeat(60));\r",
+					"console.log('🏪 BARBER SHOP API - REQUEST STARTING');\r",
+					"console.log('═'.repeat(60));\r",
+					"\r",
+					"// Request details\r",
+					"console.log('🚀 SENDING REQUEST...');\r",
+					"console.log('   🎯 Endpoint: ' + pm.request.url.toString());\r",
+					"console.log('   📤 Method: ' + pm.request.method);\r",
+					"console.log('   🕐 Time: ' + new Date().toLocaleTimeString());\r",
+					"\r",
+					"// Log request body if it exists\r",
+					"if (pm.request.body && pm.request.body.raw) {\r",
+					"    console.log('   📝 Request Body:');\r",
+					"    console.log('   ' + pm.request.body.raw);\r",
+					"}\r",
+					"\r",
+					"console.log('─'.repeat(40));"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "064676fe-970d-4b63-8767-59740e8e6d60",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"// Response header\r",
+					"console.log('\\n📨 RESPONSE RECEIVED');\r",
+					"console.log('─'.repeat(40));\r",
+					"\r",
+					"// Basic response info\r",
+					"console.log('   📊 Status: ' + pm.response.status + ' (' + pm.response.code + ')');\r",
+					"console.log('   ⏱️  Response Time: ' + pm.response.responseTime + 'ms');\r",
+					"console.log('   📦 Response Size: ' + pm.response.responseSize + ' bytes');\r",
+					"\r",
+					"// Status-based emoji feedback\r",
+					"if (pm.response.code >= 200 && pm.response.code < 300) {\r",
+					"    console.log('   ✅ SUCCESS: Request completed successfully');\r",
+					"} else if (pm.response.code >= 400 && pm.response.code < 500) {\r",
+					"    console.log('   ⚠️  CLIENT ERROR: Check your request');\r",
+					"} else if (pm.response.code >= 500) {\r",
+					"    console.log('   ❌ SERVER ERROR: Backend issue detected');\r",
+					"}\r",
+					"\r",
+					"// Response body (if JSON)\r",
+					"try {\r",
+					"    let responseJson = pm.response.json();\r",
+					"    console.log('   📋 Response Data:');\r",
+					"    console.log('   ' + JSON.stringify(responseJson, null, 2));\r",
+					"} catch (e) {\r",
+					"    console.log('   📄 Response Text: ' + pm.response.text());\r",
+					"}\r",
+					"\r",
+					"// Common tests for your API\r",
+					"pm.test(\"✅ Response time is acceptable\", function () {\r",
+					"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+					"    if (pm.response.responseTime < 500) {\r",
+					"        console.log('   🚀 FAST: Response under 500ms');\r",
+					"    } else {\r",
+					"        console.log('   🐌 SLOW: Response over 500ms');\r",
+					"    }\r",
+					"});\r",
+					"\r",
+					"pm.test(\"✅ Status code is success\", function () {\r",
+					"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202, 204]);\r",
+					"});\r",
+					"\r",
+					"pm.test(\"✅ Response has content\", function () {\r",
+					"    pm.expect(pm.response.text()).to.not.be.empty;\r",
+					"});\r",
+					"\r",
+					"// End separator\r",
+					"console.log('═'.repeat(60));\r",
+					"console.log('🏁 REQUEST COMPLETED\\n');"
+				]
+			}
+		}
+	]
+}
