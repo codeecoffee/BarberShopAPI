@@ -1,10 +1,18 @@
+using BarberApi.Data;
+using BarberApi.Extensions;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using DotNetEnv;
+
+Env.Load();
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+
 var app = builder.Build();
+builder.Services.AddDatabase();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
