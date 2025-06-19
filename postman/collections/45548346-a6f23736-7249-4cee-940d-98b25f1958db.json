@@ -31,5 +31,42 @@
 			},
 			"response": []
 		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "4bb9c2e9-072b-409f-98eb-35a9645ffa7b",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"// This runs BEFORE your request\r",
+					"console.log('%c🚀 STARTING REQUEST', 'color: blue; font-weight: bold;');\r",
+					"console.log('🎯 Endpoint:', pm.request.url.toString());\r",
+					"console.log('📤 Method:', pm.request.method);"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d821fbfc-baf0-46da-bf06-0c84f88431ed",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"// This runs AFTER you get a response\r",
+					"console.log('%c📊 RESPONSE RECEIVED', 'color: green; font-weight: bold;');\r",
+					"console.log(`✅ Status: ${pm.response.status}`);\r",
+					"console.log(`⏱️  Time: ${pm.response.responseTime}ms`);\r",
+					"\r",
+					"pm.test(\"Status code is 200\", function () {\r",
+					"    pm.response.to.have.status(200);\r",
+					"    if (pm.response.code === 200) {\r",
+					"        console.log('%c🎉 SUCCESS!', 'color: green; font-size: 16px;');\r",
+					"    }\r",
+					"});"
+				]
+			}
+		}
 	]
 }
