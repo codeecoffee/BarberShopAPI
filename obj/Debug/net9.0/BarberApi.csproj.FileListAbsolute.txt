@@ -178,3 +178,4 @@ Z:\Projects\BarberShopAPI\obj\Debug\net9.0\refint\BarberApi.dll
 Z:\Projects\BarberShopAPI\obj\Debug\net9.0\BarberApi.pdb
 Z:\Projects\BarberShopAPI\obj\Debug\net9.0\BarberApi.genruntimeconfig.cache
 Z:\Projects\BarberShopAPI\obj\Debug\net9.0\ref\BarberApi.dll
+Z:\Projects\BarberShopAPI\bin\Debug\net9.0\postman\collections\45548346-a6f23736-7249-4cee-940d-98b25f1958db.json

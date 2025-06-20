@@ -48,6 +48,13 @@ namespace BarberApi.Controllers
                 });
             }
         }
+
+        [HttpGet("get-all-data")]
+        public async Task<IActionResult> GetAllData()
+        {
+            var data = await _context.Barbers.ToListAsync();
+            return Ok(data);
+        }
     }
     
 }

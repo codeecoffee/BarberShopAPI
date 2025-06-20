@@ -31,7 +31,31 @@ namespace BarberApi.Data
                 .HasOne(asm=> asm.Service)
                 .WithMany(s=> s.AppointmentServiceMappings)
                 .HasForeignKey(asm => asm.ServiceId);
-        
+
+            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+            {
+                foreach (var property in entityType.GetProperties())
+                {
+                    if (property.ClrType == typeof(DateTime) || property.ClrType == typeof(DateTime?))
+                    {
+                        property.SetColumnType("datetime");
+                    }
+
+                    if (property.ClrType == typeof(TimeSpan) || property.ClrType == typeof(TimeSpan?))
+                    {
+                        property.SetColumnType("time");
+                    }
+                }
+            }
+            modelBuilder.Entity<BusinessSettings>()
+                .Property(e => e.WorkingDays)
+                .HasConversion(
+                    v => string.Join(',', v.Select(d => (int)d)),
+                    v => v.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                        .Select(s => (DayOfWeek)int.Parse(s))
+                        .ToArray()
+                );
+
             base.OnModelCreating(modelBuilder);
         }
     }
