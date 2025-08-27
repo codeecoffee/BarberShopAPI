@@ -1,13 +1,12 @@
-using BarberApi.Models;
-using BarberApi.Data;
-using Microsoft.EntityFrameworkCore;
-using BCrypt.Net;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using BarberApi.Data;
+using BarberApi.Services;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
-namespace BarberApi.Services;
+namespace BarberApi.Models.Entities;
 
 public class AuthService: IAuthService
 {

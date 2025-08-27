@@ -14,9 +14,3 @@ public class User: BaseEntity
     public virtual ICollection<AuditLog> AuditLogs { get; set; } = new List<AuditLog>();
 }
 
-public enum UserRole
-{
-    Admin,
-    Barber,
-    Customer
-}

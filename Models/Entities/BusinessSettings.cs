@@ -4,9 +4,9 @@ public class BusinessSettings : BaseEntity
 {
     public TimeSpan OpeningTime { get; set; }
     public TimeSpan ClosingTime { get; set; }
-    public DayOfWeek[] WorkingDays { get; set; }
+    public WorkingDays WorkingDays { get; set; } = WorkingDays.Weekdays;
     public int SlotDurationMinutes { get; set; }
     public int AdvanceBookingDays { get; set; }
     public DateTime UpdatedAt { get; set; }
-    public Guid UpdatedBy { get; set; }
 }
+

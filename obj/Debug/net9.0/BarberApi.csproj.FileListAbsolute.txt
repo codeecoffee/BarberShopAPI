@@ -179,3 +179,12 @@ Z:\Projects\BarberShopAPI\obj\Debug\net9.0\BarberApi.pdb
 Z:\Projects\BarberShopAPI\obj\Debug\net9.0\BarberApi.genruntimeconfig.cache
 Z:\Projects\BarberShopAPI\obj\Debug\net9.0\ref\BarberApi.dll
 Z:\Projects\BarberShopAPI\bin\Debug\net9.0\postman\collections\45548346-a6f23736-7249-4cee-940d-98b25f1958db.json
+Z:\Projects\BarberShopAPI\bin\Debug\net9.0\BCrypt.Net-Next.dll
+Z:\Projects\BarberShopAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+Z:\Projects\BarberShopAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+Z:\Projects\BarberShopAPI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+Z:\Projects\BarberShopAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+Z:\Projects\BarberShopAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+Z:\Projects\BarberShopAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+Z:\Projects\BarberShopAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+Z:\Projects\BarberShopAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll

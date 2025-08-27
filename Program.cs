@@ -6,8 +6,6 @@ using DotNetEnv;
 
 Env.Load();
 var builder = WebApplication.CreateBuilder(args);
-
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddDatabase();
 builder.Services.AddControllers();
@@ -50,5 +48,4 @@ var app = builder.Build();
 
 app.UseRouting();
 app.MapControllers();
-
 app.Run();
