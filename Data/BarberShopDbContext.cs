@@ -30,6 +30,8 @@ namespace BarberApi.Data
             ConfigureBusinessSettings(modelBuilder);
             ConfigureNotificationLog(modelBuilder);
             ConfigureAuditLog(modelBuilder);
+            
+            SeedData(modelBuilder);
         }
         
         private void ConfigureBaseEntity(ModelBuilder modelBuilder)
@@ -58,7 +60,7 @@ namespace BarberApi.Data
             
             builder.Property(u=>u.Username)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(200);
             builder.Property(u=>u.PasswordHash)
                 .IsRequired()
                 .HasMaxLength(50);
@@ -78,11 +80,6 @@ namespace BarberApi.Data
                 .WithMany() //barber can have many users pointing to it
                 .HasForeignKey(u=>u.BarberId)
                 .OnDelete(DeleteBehavior.SetNull);
-            //Business Rules
-            builder.HasCheckConstraint("CK_User_RoleConsistency",
-                "(Role = 'Customer' AND CustomerId IS NOT NULL AND BarberId IS NULL) OR " +
-                "(Role = 'Barber' AND BarberId IS NOT NULL AND CustomerId IS NULL) OR " +
-                "(Role = 'Admin' AND CustomerId IS NULL AND BarberId IS NULL)");
         }
         private void ConfigureCustomer(ModelBuilder modelBuilder)
         {
@@ -152,6 +149,8 @@ namespace BarberApi.Data
             
             builder.Property(a => a.AppointmentDateTime)
                 .IsRequired();
+            builder.Property(a => a.AppointmentEndDateTime)
+                .IsRequired();
             builder.Property(a => a.Status)
                 .IsRequired()
                 .HasConversion<string>(); // Store enum as string
@@ -175,10 +174,10 @@ namespace BarberApi.Data
                 .HasDatabaseName("IX_Appointment_Customer_DateTime");
             builder.HasIndex(a => a.Status)
                 .HasDatabaseName("IX_Appointment_Status");
+            builder.HasIndex(a => new {a.BarberId, a.AppointmentDateTime, a.AppointmentEndDateTime})
+                .HasDatabaseName("IX_Appointment_Barber_TimeSlot")
+                .IsUnique();
             
-            // Business rules
-            builder.HasCheckConstraint("CK_Appointment_NotInPast", 
-                "AppointmentDateTime > NOW() OR Status IN ('Completed', 'Cancelled', 'NoShow')");
         }
         private void ConfigureAppointmentService(ModelBuilder modelBuilder)
         {

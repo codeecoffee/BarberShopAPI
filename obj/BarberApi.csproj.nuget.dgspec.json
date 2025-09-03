@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\Projects\\BarberShopAPI\\BarberApi.csproj": {}
+    "A:\\Projects\\BarberApi\\BarberApi.csproj": {}
   },
   "projects": {
-    "Z:\\Projects\\BarberShopAPI\\BarberApi.csproj": {
+    "A:\\Projects\\BarberApi\\BarberApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\Projects\\BarberShopAPI\\BarberApi.csproj",
+        "projectUniqueName": "A:\\Projects\\BarberApi\\BarberApi.csproj",
         "projectName": "BarberApi",
-        "projectPath": "Z:\\Projects\\BarberShopAPI\\BarberApi.csproj",
+        "projectPath": "A:\\Projects\\BarberApi\\BarberApi.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "Z:\\Projects\\BarberShopAPI\\obj\\",
+        "outputPath": "A:\\Projects\\BarberApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

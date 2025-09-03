@@ -1,5 +1,4 @@
 namespace BarberApi.Models;
-
 public class Appointment : BaseEntity
 {
     public Guid CustomerId { get; set; }
