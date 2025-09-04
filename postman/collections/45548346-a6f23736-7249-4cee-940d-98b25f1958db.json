@@ -7,7 +7,20 @@
 	"item": [
 		{
 			"name": "Auth",
-			"item": [],
+			"item": [
+				{
+					"name": "New Request",
+					"id": "45548346-9e2d5c58-d95a-44eb-acd1-1ad05be90b46",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
 			"id": "45548346-041c40cb-50fc-4cd5-8c49-dff8370dafb5"
 		},
 		{
@@ -33,18 +46,6 @@
 						"db-connection"
 					]
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "New Request",
-			"id": "45548346-9e2d5c58-d95a-44eb-acd1-1ad05be90b46",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": []
 			},
 			"response": []
 		}
