@@ -126,6 +126,11 @@
 			"id": "45548346-041c40cb-50fc-4cd5-8c49-dff8370dafb5"
 		},
 		{
+			"name": "New Folder",
+			"item": [],
+			"id": "45548346-1caab54d-0159-4a6e-8d87-bf420d1951f7"
+		},
+		{
 			"name": "Test Db Connection",
 			"id": "45548346-0801bded-00ef-41a6-858a-5f161d16d815",
 			"protocolProfileBehavior": {
