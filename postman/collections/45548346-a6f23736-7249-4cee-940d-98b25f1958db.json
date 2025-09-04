@@ -30,6 +30,30 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "45548346-9e2d5c58-d95a-44eb-acd1-1ad05be90b46",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "45548346-69f93d66-12a1-44e7-8522-040188a58bdb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	],
 	"event": [
