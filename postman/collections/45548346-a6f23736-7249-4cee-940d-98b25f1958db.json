@@ -91,7 +91,7 @@
 			"name": "Barber",
 			"item": [
 				{
-					"name": "Register Copy",
+					"name": "Register",
 					"id": "45548346-960e91eb-0314-4992-98e6-86f621f64fc4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
