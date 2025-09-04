@@ -47,7 +47,7 @@
 					"response": []
 				},
 				{
-					"name": "Register Copy",
+					"name": "Login",
 					"id": "45548346-971badce-e74b-4e92-a89e-361a006c8fae",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
