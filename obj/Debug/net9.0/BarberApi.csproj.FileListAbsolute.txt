@@ -314,3 +314,6 @@ A:\Projects\BarberApi\bin\Debug\net9.0\runtimes\win-x64\native\krb5_64.dll
 A:\Projects\BarberApi\bin\Debug\net9.0\runtimes\win-x64\native\krbcc64.dll
 A:\Projects\BarberApi\bin\Debug\net9.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
 A:\Projects\BarberApi\obj\Debug\net9.0\BarberApi.sourcelink.json
+A:\Projects\BarberApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+A:\Projects\BarberApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+A:\Projects\BarberApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
