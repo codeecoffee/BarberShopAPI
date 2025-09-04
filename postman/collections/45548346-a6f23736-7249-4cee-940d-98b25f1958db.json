@@ -47,14 +47,40 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
-					"id": "45548346-bd9d7cd1-ea95-40b5-aeaa-a39ed71d57df",
+					"name": "Register Copy",
+					"id": "45548346-971badce-e74b-4e92-a89e-361a006c8fae",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"testuser\",\r\n    \"password\": \"testpass123\",\r\n    \"role\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
 					},
 					"response": []
 				}
