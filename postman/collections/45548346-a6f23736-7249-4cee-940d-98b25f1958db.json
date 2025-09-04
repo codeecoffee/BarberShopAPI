@@ -9,7 +9,7 @@
 			"name": "Auth",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "NewUser",
 					"id": "45548346-9e2d5c58-d95a-44eb-acd1-1ad05be90b46",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
