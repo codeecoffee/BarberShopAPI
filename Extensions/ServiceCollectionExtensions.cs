@@ -33,6 +33,33 @@ namespace BarberApi.Extensions
             services.AddEndpointsApiExplorer();
             return services;
         }
+
+        public static IServiceCollection AddJwtAuthentication(this IServiceCollection services)
+        {
+            var jwtKey = Environment.GetEnvironmentVariable("JWT_KEY");
+            var jwtIssuer = Environment.GetEnvironmentVariable("JWT_ISSUER");
+            var jwtAudience = Environment.GetEnvironmentVariable("JWT_AUDIENCE");
+
+            if (string.IsNullOrEmpty(jwtKey))
+                throw new InvalidOperationException("JWT_KEY environment variable is required");
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = jwtIssuer,
+                        ValidAudience = jwtAudience,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),
+                        ClockSkew = TimeSpan.Zero
+                    };
+                });
+            services.AddAuthorization();
+            return services;
+        }
     }
     
     

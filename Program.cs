@@ -5,6 +5,7 @@ Env.Load();
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDatabase();
 builder.Services.AddCustomServices();
+builder.Services.AddJwtAuthentication();
 builder.Services.AddAuthentication();
 builder.Services.AddControllers();
 
