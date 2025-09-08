@@ -63,7 +63,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"testuser\",\r\n    \"password\": \"testpass123\",\r\n    \"role\": 0\r\n}",
+							"raw": "{\r\n    \"username\": \"testuser\",\r\n    \"password\": \"testpass123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -71,14 +71,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/api/auth/register",
+							"raw": "{{base_url}}/api/auth/login",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
 								"auth",
-								"register"
+								"login"
 							]
 						}
 					},
