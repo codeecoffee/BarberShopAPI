@@ -103,11 +103,16 @@
 								"key": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjlhMDkzNDQwLTYzNWMtNGYzZS1iODQzLTI1NGViNTZlYWFmNyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJ0ZXN0dXNlciIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluIiwiZXhwIjoxNzU3MDE3MzUxLCJpc3MiOiJCYXJiZXJBcGkiLCJhdWQiOiJCYXJiZXJBcGlDbGllbnRzIn0.lJA1L7YqizGd8XJ0HET9rRlFUbwRLRygCTYWVO9WzDQ",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"testuser\",\r\n    \"password\": \"testpass123\",\r\n    \"role\": 0\r\n}",
+							"raw": "{\r\n    \"name\": \"Mike Barber\",\r\n    \"email\": \"mikebarber@barbershop.com\",\r\n    \"phone\": \"310739-2783\",\r\n    \"specialities\": \"Haircuts, Beard Trimming\",\r\n    \"picture\": null\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -115,14 +120,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/api/auth/register",
+							"raw": "{{base_url}}/api/barbers/",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
-								"auth",
-								"register"
+								"barbers",
+								""
 							]
 						}
 					},
